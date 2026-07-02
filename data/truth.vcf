@@ -1,0 +1,6 @@
+##fileformat=VCFv4.2
+##source=make_test_data
+##contig=<ID=chr_test,length=240>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr_test	80	.	T	G	.	PASS	TYPE=SNP
+chr_test	149	.	ACC	A	.	PASS	TYPE=DEL

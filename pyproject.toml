@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seqvar"
+version = "0.1.0"
+description = "A small pure-Python toolkit: from sequencer reads to variant calls (FASTQ QC, SAM/BAM ops, variant calling, VCF handling and comparison)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Viraj Muthye" }]
+keywords = ["bioinformatics", "variant-calling", "vcf", "sam", "bam", "fastq", "genomics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Intended Audience :: Science/Research",
+]
+# Core toolkit is dependency-free (stdlib only).
+dependencies = []
+
+[project.optional-dependencies]
+# Optional: pysam gives native BAM reading without shelling out to samtools.
+bam = ["pysam>=0.21"]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+seqvar = "seqvar.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/virajmuthye/seq2variant"
+
+[tool.setuptools]
+packages = ["seqvar"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

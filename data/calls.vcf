@@ -1,0 +1,12 @@
+##fileformat=VCFv4.2
+##source=seqvar.call_variants
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth">
+##INFO=<ID=AC,Number=1,Type=Integer,Description="Alt allele count">
+##INFO=<ID=AF,Number=1,Type=Float,Description="Alt allele fraction">
+##INFO=<ID=TYPE,Number=1,Type=String,Description="SNP, INS or DEL">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Ref,Alt depths">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE
+chr_test	80	.	T	G	200	PASS	DP=10;AC=10;AF=1.0;TYPE=SNP	GT:DP:AD	1/1:10:0,10
+chr_test	149	.	ACC	A	170	PASS	DP=10;AC=9;AF=0.9;TYPE=DEL	GT:DP:AD	1/1:10:1,9
